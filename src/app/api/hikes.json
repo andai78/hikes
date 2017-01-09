@@ -1,0 +1,26 @@
+[
+      {
+        "name": "Melun",
+        "region": "Seine et Marne",
+        "area": "Ile de France",
+        "startingPoint": "Plan d'eau",
+        "distance": "12.8",
+        "distanceUnit": "km",
+        "duration": "240",
+        "heightDifference": "267",
+        "description": "Randonée sympa",
+        "evaluation": "[4,5,3]"
+      },
+      {
+        "name": "Yerres",
+        "region": "Essone",
+        "area": "Ile de France",
+        "startingPoint": "Château",
+        "distance": "15.8",
+        "distanceUnit": "km",
+        "duration": "270",
+        "heightDifference": "232",
+        "description": "Difficile",
+        "evaluation": "[5,5]"
+      }
+  ]
