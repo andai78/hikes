@@ -1,15 +1,21 @@
-<h1>
-  {{title}}
-</h1>
-<ul *ngFor="let h of hikes">
-  <li>{{h.name}}</li>
-  <li>{{h.region}}</li>
-  <li>{{h.area}}</li>
-  <li>{{h.startingPoint}}</li>
-  <li>{{h.distance}}</li>
-  <li>{{h.distanceUnit}}</li>
-  <li>{{h.duration}}</li>
-  <li>{{h.heightDifference}}</li>
-  <li>{{h.description}}</li>
-  <li>{{h.evaluation}}</li>
-</ul>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" [routerLink]="['/home']">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a [routerLink]="['/home']">Home</a></li>
+            <li><a [routerLink]="['/hikes']">Hikes</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+<router-outlet></router-outlet>

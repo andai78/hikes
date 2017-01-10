@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Hike } from '../hike/hike';
+import { HikeService } from '../hike/hike.service'; 
 
 @Component({
   selector: 'app-hike-list',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HikeListComponent implements OnInit {
 
-  constructor() { }
+  hikes: Hike[];
 
-  ngOnInit() {
+  constructor(private _hikeService: HikeService){
+    
   }
-
+  ngOnInit(){
+    this._hikeService.getHikesFromApi()
+        .subscribe(
+          resp => this.hikes = resp,
+          error => console.error(error.status) 
+          );
+  }
 }
