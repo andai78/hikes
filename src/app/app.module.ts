@@ -8,7 +8,8 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { HikeListComponent } from './hike-list/hike-list.component'
+import { HikeListComponent } from './hike-list/hike-list.component';
+import { HikeDetailsComponent } from './hike-details/hike-details.component';
 
 
 
@@ -30,6 +31,10 @@ import { HikeListComponent } from './hike-list/hike-list.component'
       {
         path: 'hikes',
         component: HikeListComponent
+      },
+      {
+        path: 'hikes/:id',
+        component: HikeDetailsComponent
       },
       {
         path: '',

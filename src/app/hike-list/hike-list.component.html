@@ -1,13 +1,5 @@
 <h3>Liste de randonnées</h3>
 <ul *ngFor="let h of hikes">
-  <li>{{h.name}}</li>
-  <li>{{h.region}}</li>
-  <li>{{h.area}}</li>
-  <li>{{h.startingPoint}}</li>
-  <li>{{h.distance}}</li>
-  <li>{{h.distanceUnit}}</li>
-  <li>{{h.duration}}</li>
-  <li>{{h.heightDifference}}</li>
+  <li><a [routerLink]="['/hikes', h.id]">{{h.name}}</a></li>
   <li>{{h.description}}</li>
-  <li>{{h.evaluation}}</li>
 </ul>
