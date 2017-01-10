@@ -1,5 +1,6 @@
 <h3>Liste de randonnées</h3>
-<ul *ngFor="let h of hikes">
+<input type="text" placeholder="search" [(ngModel)]="search" />
+<ul *ngFor="let h of hikes | hikePipe:search">
   <li><a [routerLink]="['/hikes', h.id]">{{h.name}}</a></li>
   <li>{{h.description}}</li>
 </ul>
